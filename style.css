@@ -9,6 +9,157 @@
     font-family: "poppins", sans-serif;
 }
 
+/* Settings for DarkMode */
+label {
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 3rem;
+    bottom: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+label::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0; /* Start from the left */
+    bottom: -3px;
+    border: 2px solid;
+    border-radius: 50%;
+    background: #000;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+label.active::before {
+    left: 24px; /* Move to the right */
+    background: #fff;
+}
+
+body.night {
+    background: #fff;
+    color: #000;
+}
+
+body.night * {
+    background: #fff;
+    color: #000;
+}
+
+body.night .header {
+    background: transparent;
+}
+
+body.night .logo {
+    color: #000;
+    background: transparent;
+}
+
+body.night .logo span {
+    text-shadow: 0 0 25px rgb(153, 0, 255); /* Changed to purple */
+    background: transparent;
+}
+
+body.night .navbar a {
+    color: #000;
+    border-bottom: 3px transparent;
+    background-color: transparent;
+}
+
+body.night .navbar{
+    background: transparent;
+}
+
+body.night .navbar a:hover,
+body.night .navbar a.active {
+    color: rgb(153, 0, 255); /* Changed to purple */
+    border-bottom: 3px solid rgb(153, 0, 255); /* Changed to purple */
+}
+
+body.night #menu-icon {
+    color: rgb(153, 0, 255); /* Changed to purple */
+}
+
+body.night span {
+    color: rgb(153, 0, 255); /* Changed to purple */
+}
+
+body.night span::after {
+    color: rgb(153, 0, 255); /* Changed to purple */
+}
+
+body.night .home-content h3,
+body.night .home-content h1,
+body.night .home-content p {
+    color: #000;
+}
+
+body.night .home-img img {
+    box-shadow: 0 0 25px rgb(153, 0, 255); /* Changed to purple */
+    border-radius: 50%; /* Ensure the image is circular */
+}
+
+body.night .home-img img:hover {
+    box-shadow: 0 0 25px rgb(153, 0, 255), 0 0 50px rgb(153, 0, 255), 0 0 100px rgb(153, 0, 255); /* Changed to purple */
+    border-radius: 50%; /* Ensure the image is circular */
+}
+
+body.night .social-icons a {
+    background: transparent;
+    border: 3px solid rgb(153, 0, 255); /* Changed to purple */
+    color: rgb(153, 0, 255); /* Changed to purple */
+    border-radius: 50%; /* Ensure the icons are circular */
+}
+
+body.night .social-icons a:hover {
+    color: rgb(153, 0, 255);
+    background-color: rgb(255, 255, 255); /* Changed to purple */
+    box-shadow: 0 0 25px rgb(153, 0, 255); /* Changed to purple */
+}
+
+body.night .btn {
+    background: rgb(153, 0, 255); /* Changed to purple */
+    box-shadow: 0 0 25px rgb(153, 0, 255); /* Changed to purple */
+    color: #fff;
+}
+
+body.night .btn-group a:nth-of-type(2) {
+    background: #fff;
+    color: rgb(153, 0, 255); /* Changed to purple */
+    border: 2px solid rgb(153, 0, 255); /* Changed to purple */
+}
+
+body.night .btn-group a:nth-of-type(2):hover {
+    background-color: rgb(153, 0, 255); /* Changed to purple */
+    box-shadow: 0 0 25px rgb(153, 0, 255);
+    color: #fff;
+}
+
+body.night .text-animation span::before {
+    color: rgb(153, 0, 255); /* Changed to purple */
+}
+
+body.night .text-animation span::after {
+    background-color: #fff;
+    border-left: 3px solid #fff;
+}
+
+
+.btn-group.btn:hover{
+    box-shadow: 0 0 25px rgb(153, 0, 255);
+    background-color: rgb(153, 0, 255);
+    color: black;
+}
+
+
+
+
+
+
+
 :root {
     --bg-color: #080808;
     --second-bg-color: #131313;
@@ -139,32 +290,14 @@ span{
     0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
-    10% {
-        border-radius: 65% 35% 55% 45% / 45% 65% 35% 55%;
-    }
-    20% {
+    25% {
         border-radius: 50% 60% 70% 40% / 50% 60% 40% 50%;
-    }
-    30% {
-        border-radius: 55% 45% 65% 35% / 60% 40% 60% 40%;
-    }
-    40% {
-        border-radius: 40% 70% 60% 50% / 50% 70% 40% 60%;
     }
     50% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     }
-    60% {
-        border-radius: 35% 65% 45% 55% / 65% 35% 55% 45%;
-    }
-    70% {
+    75% {
         border-radius: 40% 50% 60% 70% / 60% 50% 60% 40%;
-    }
-    80% {
-        border-radius: 45% 55% 35% 65% / 55% 45% 65% 35%;
-    }
-    90% {
-        border-radius: 50% 40% 60% 70% / 60% 40% 70% 50%;
     }
     100% {
         border-radius: 70% 30% 40% 60% / 40% 60% 40% 30%;
@@ -275,7 +408,7 @@ span{
 }
 @keyframes cursor{
     to{
-        border-left: 2px solid var(--main-color);
+        border-left: 2px solid rgb(155, 144, 144);
     }
 }
 @keyframes words{
@@ -327,3 +460,6 @@ span{
     }
 }
  
+
+
+
