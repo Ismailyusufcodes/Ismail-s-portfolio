@@ -60,4 +60,22 @@
 </section>
     <script src="script.js"></script>
 </body>
+
+
+
+
+<label for="dark-change"></label>
+<input type="checkbox" id="dark-change" style="display: none;">
+<script>
+    // Select the body element and the dark mode toggle button
+    var content = document.body; // Selects the body element
+    var darkmode = document.getElementById("dark-change"); // Selects the element with ID "dark-change"
+
+    // Add an event listener to the dark mode toggle button
+    darkmode.addEventListener("change", function() {
+        // Toggle the dark mode class on the body element
+        document.querySelector('label').classList.toggle("active");
+        content.classList.toggle("night");
+    });
+</script>
 </html>
